@@ -1,5 +1,10 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
+\usepackage{booktabs} % comparison table rules
+\usepackage{amssymb}  % \checkmark
+\usepackage{tabularx} % wide comparison table
+\usepackage[round]{natbib} % author-year citations (\citet / \citep / \cite)
+\bibliographystyle{plainnat}
 
 \title{polarization}
 \author{LingBo ZENG}
@@ -10,5 +15,10 @@
 \maketitle
 
 \section{Introduction}
+
+% ---- Background / Related Work ----
+\input{background}
+
+\bibliography{refs}
 
 \end{document}
