@@ -1,7 +1,7 @@
 % =====================================================================
-% introduction.tex  --  "Polarization Defusing" project
-% Draft Introduction. Hands off into \input{background}.
-% Citations use natbib (\citet / \cite); keys live in refs.bib.
+% introduction.tex  --  "Polarization Defusing" project  (LAB-ONLY citations)
+% Draft Introduction. Cites only Ray LC lab papers; hands off into \input{background}.
+% Citation keys live in refs.bib.
 % =====================================================================
 
 \section{Introduction}
@@ -10,59 +10,56 @@
 Polarization has become a defining feature of everyday online life. On the
 platforms where people now spend ordinary social time---group chats, online
 forums, and Discord-style channels---disagreement frequently hardens into
-hostility rather than dialogue. This is not merely a matter of people holding
-different views: polarization online is often \emph{affective} and
-identity-driven, such that interactions between ideologically opposed users are
-systematically more negative than those among like-minded
-ones~\citep{marchal2022polarization}, and contact between rival groups can
-amplify rather than soften antagonism~\citep{efstratiou2022nonpolar,
-zhang2019sportshate}. Within tightly bonded communities, emotionally charged
-expression escalates into aggression, trolling, and retaliatory spirals that
-entrench positions and drive moderate voices out~\citep{wang2023emotional}. The
-result is a familiar pathology of large interpersonal groups: the more people
-talk, the further apart they move.
+hostility rather than dialogue. Our own studies of these media show how this
+unfolds: in online forums, fans debating rival figures recruit generative AI to
+sharpen their arguments, and their rhetoric shifts as opposing newcomers
+arrive~\cite{zeng2025ronaldo}; on everyday social platforms, people channel
+contested or stigmatized stances through emotionally charged personal narrative
+and humor, whether expressing opinion and emotion about climate change in TikTok
+videos~\cite{zhang2026climate} or building community around ADHD through memes and
+comments on Instagram~\cite{zhang2026adhd}. Such expression is bound up with
+identity, as our work on how online-dating users craft profiles for an imagined
+audience illustrates~\cite{zhang2025dating}. The recurring pattern is a pathology
+of large interpersonal groups: opinion is voiced in affective, identity-laden
+ways, and the more people talk past one another, the further apart they move.
 
 Existing responses are poorly matched to this dynamic. Content moderation,
-fact-checking, and top-down corrective messaging treat polarization as a
-problem of bad information delivered to individuals, yet people actively
-recognize and resist perceived persuasion attempts, so overt correction tends
-to provoke reactance in exactly the entrenched users it
-targets~\citep{friestad1994persuasion}. These interventions also operate one
-user at a time, against a phenomenon that is fundamentally \emph{social}---
-sustained by group norms, peer signaling, and the felt presence of an audience.
-A growing body of work shows that generative AI is now deeply entangled in these
-group dynamics, with users recruiting large language models (LLMs) to sharpen
-arguments and win debates in live forums~\citep{zeng2025ronaldo}. If generative
-AI can amplify polarized debate, the inverse question follows naturally: can a
-\emph{population} of AI agents instead be designed to defuse it?
+fact-checking, and top-down corrective messaging treat polarization as a problem
+of bad information delivered to individuals, yet overt correction tends to
+provoke reactance in exactly the entrenched users it targets. These interventions
+also operate one user at a time, against a phenomenon that is fundamentally
+\emph{social}---sustained by group norms, peer signaling, and the felt presence
+of an audience. If generative AI can amplify polarized debate~\cite{zeng2025ronaldo},
+the inverse question follows naturally: can a \emph{population} of AI agents
+instead be designed to defuse it?
 
 We propose \emph{polarization defusing}: intervening directly in the everyday
-chat medium of an already-polarized community with a population of
-generative-AI agents that exert lateral \emph{social influence} rather than
-top-down moderation. Two recent capabilities make this feasible. First,
-generative agents can credibly simulate human behavior at scale---maintaining
-memory, reflection, and plausible social action---making a community of LLM
-agents a viable substrate for staging influence \emph{inside} a group rather
-than addressing users individually~\citep{park2023generative}. Second, AI
-interlocutors positioned as peers and mediators, rather than authorities, can
-broaden perspectives and depolarize audiences in online
-debate~\citep{govers2024aimediators}. Our central design bet is that a chorus of
-peer-like agents---modeling moderate positions, normalizing disagreement, and
+chat medium of an already-polarized community with a population of generative-AI
+agents that exert lateral \emph{social influence} rather than top-down
+moderation. Our prior systems supply the building blocks. \emph{Can AI Prompt
+Humans?}~\cite{zhang2025ecoecho} shows that multimodal agents can prompt people's
+actions and shift their behavior, inverting the usual human-prompts-AI
+relationship and establishing that a population of agents can \emph{initiate}
+influence. \emph{Breaking the News}~\cite{tang2025breaking} shows that LLM agents
+can simulate a reactive public whose opinion shifts believably---the machinery
+needed to model peer reaction at scale. Our central design bet is that a chorus
+of peer-like agents---modeling moderate positions, normalizing disagreement, and
 listening before they challenge---can reduce the salience of the persuasion
 attempt itself and thereby move people where a single authoritative debunker
 cannot.
 
 Concretely, we envision a forum or Discord-style channel seeded with multiple
 GenAI agents and populated with recruited members of a polarized group. The
-agents draw on conversational strategies known to build the trust that makes
-attitude change possible---active listening, backchanneling, and reciprocal
-self-disclosure~\citep{xiao2020ifihear, jiang2026hear}---and may optionally
-employ light playful or inoculation-style framings that make encountering an
-opposing view feel exploratory rather than confrontational~\citep{roozenbeek2019badnews}.
-This design lets us study defusing along two axes that prior work has treated
-separately: whether the intervention shifts \emph{opinion} (expressed stance,
-affect toward the out-group) or \emph{behavior} (how members post, escalate, or
-engage). Accordingly, we ask:
+agents draw on conversational strategies our group has shown to build trust and
+elicit disclosure---active listening realized through context-aware pacing and
+strategic silence~\cite{jiang2026hear}---and may optionally employ playful or
+perspective-taking framings, in the register of our LLM-driven games for shifting
+attitudes, that make encountering an opposing view feel exploratory rather than
+confrontational~\cite{zhou2024eternagram, du2025invisible}. This design lets us
+study defusing along two axes that prior work has treated separately: whether the
+intervention shifts \emph{opinion} (expressed stance, affect toward the
+out-group) or \emph{behavior} (how members post, escalate, or engage).
+Accordingly, we ask:
 \begin{itemize}
   \item \textbf{RQ1.} Can a multi-agent population of GenAI peers reduce
   affective and opinion polarization within an already-polarized online group,
@@ -81,7 +78,8 @@ intervention situated in an everyday group medium; (2)~a system that embeds
 peer-like GenAI agents with active-listening and playful strategies in a
 forum/Discord-style channel; and (3)~empirical findings on whether and how such
 agents defuse opinion and behavioral polarization in recruited, already-polarized
-groups. The remainder of the paper situates these contributions across three
-lines of prior work---how online groups polarize, how LLM and multi-agent
-systems carry social influence, and how conversational and playful interventions
-shift attitudes---which we review next.
+groups. The remainder of the paper situates these contributions against our
+group's prior work along three lines---how people express opinion and form
+communities on everyday platforms, how our LLM and multi-agent systems carry
+social influence, and how our conversational and playful designs shift
+attitudes---which we review next.
