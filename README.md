@@ -38,6 +38,7 @@ show it backfires.
 | [`measures.md`](measures.md) | Measurement plan — constructs → validated instruments → RQ → pre/during/post/follow-up timing → analysis. | FIRST |
 | [`survey_instrument.md`](survey_instrument.md) | Exact survey item wording per wave (SSIS, feeling thermometer, social distance, traits, IOS, CIIM mediator, allocation, reactance, manipulation checks) + scoring. | — |
 | [`pilot_protocol.md`](pilot_protocol.md) | ~20-person toxicity-induction pilot that doubles as the control cell: induction levers, procedure, 4 measure buckets, success criteria, ethics. | SECOND |
+| [`recruitment.md`](recruitment.md) | Recruitment cautions (mask purpose, deception/IRB, quotas, cross-cultural), screener, and bilingual (EN/中文) recruitment messages. | recruit |
 
 ### 🤖 Intervention eval kit
 | File | What it is | TODO |
@@ -73,7 +74,7 @@ All `\cite` keys resolve against `refs.bib` — verified each push.
 | **SECOND** — induce + measure toxic convo | ✅ protocol drafted | `pilot_protocol.md` |
 | **#1** — eval LLM intervention texts | ✅ materials ready; needs Discord scoring | `intervention_examples.md`, `agent_posts_*.md` |
 | Write RW, 3 subsections | ✅ in Overleaf (2.3 provisional) | `background.tex` |
-| Recruit participants | ⬜ not started | (screener TBD) |
+| Recruit participants | 🟡 materials ready (cautions, screener, EN/中文 messages) | `recruitment.md` |
 | Finalize system / lock §2.3 Technical | ⬜ pending design | `background.tex` |
 
 ### Open items
