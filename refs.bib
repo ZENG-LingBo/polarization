@@ -1,16 +1,151 @@
 % =====================================================================
-% refs.bib  --  "Polarization Defusing"  (LAB-ONLY related work)
-% At this stage the related work cites ONLY papers from Ray LC's lab
-% ("Studio for Narrative Spaces"). External works are intentionally excluded.
-%
-% NOTE ON AUTHORS: the five anchor papers have full author names (verified
-% via DBLP/ACM). The additional lab papers below use the author forms given
-% on the lab's publication listing (https://recfro.github.io/pubs/), i.e.
-% "Family + given initials". Expand to full first names before submission.
-% Titles / venues / years / DOIs are taken from the lab listing.
+% refs.bib  --  "Polarization Defusing"  (Lakers vs Celtics)
+% Theory-driven related work in three strands:
+%   2.1 Sociological  | 2.2 Psychological | 2.3 Technical (provisional)
+% Mixes foundational theory (verified via Crossref/DBLP/publisher) with
+% Ray LC lab papers (the HCI/empirical anchors).
+% Author note: the additional lab papers (zhang2026*, zhang2025dating, etc.)
+% use the author initials from the lab listing; expand before submission.
 % =====================================================================
 
-% ---------- Anchor lab papers (full author data verified) ----------
+% =======================  EXTERNAL THEORY  ===========================
+
+% ---- 2.1 Sociological: affective polarization, social identity, online ----
+
+@article{iyengar2015fear,
+  author  = {Iyengar, Shanto and Westwood, Sean J.},
+  title   = {Fear and Loathing across Party Lines: New Evidence on Group Polarization},
+  journal = {American Journal of Political Science},
+  year    = {2015},
+  volume  = {59},
+  number  = {3},
+  pages   = {690--707},
+  doi     = {10.1111/ajps.12152}
+}
+
+@article{iyengar2019origins,
+  author  = {Iyengar, Shanto and Lelkes, Yphtach and Levendusky, Matthew and Malhotra, Neil and Westwood, Sean J.},
+  title   = {The Origins and Consequences of Affective Polarization in the United States},
+  journal = {Annual Review of Political Science},
+  year    = {2019},
+  volume  = {22},
+  pages   = {129--146},
+  doi     = {10.1146/annurev-polisci-051117-073034}
+}
+
+@article{wann1993identification,
+  author  = {Wann, Daniel L. and Branscombe, Nyla R.},
+  title   = {Sports Fans: Measuring Degree of Identification with Their Team},
+  journal = {International Journal of Sport Psychology},
+  year    = {1993},
+  volume  = {24},
+  number  = {1},
+  pages   = {1--17}
+}
+
+@article{donkers2025synthetic,
+  author  = {Donkers, Tim and Ziegler, J{\"u}rgen},
+  title   = {Understanding Online Polarization Through Human-Agent Interaction in a Synthetic LLM-Based Social Network},
+  journal = {Proceedings of the International AAAI Conference on Web and Social Media},
+  year    = {2025},
+  volume  = {19},
+  number  = {1},
+  pages   = {457--478},
+  doi     = {10.1609/icwsm.v19i1.35826}
+}
+
+% ---- 2.2 Psychological: SIT, contact, superordinate goals, CIIM, reactance ----
+
+@incollection{tajfel1979sit,
+  author    = {Tajfel, Henri and Turner, John C.},
+  title     = {An Integrative Theory of Intergroup Conflict},
+  booktitle = {The Social Psychology of Intergroup Relations},
+  editor    = {Austin, William G. and Worchel, Stephen},
+  pages     = {33--47},
+  publisher = {Brooks/Cole},
+  address   = {Monterey, CA},
+  year      = {1979}
+}
+
+@book{sherif1961robbers,
+  author    = {Sherif, Muzafer and Harvey, O. J. and White, B. Jack and Hood, William R. and Sherif, Carolyn W.},
+  title     = {Intergroup Conflict and Cooperation: The Robbers Cave Experiment},
+  publisher = {University Book Exchange},
+  address   = {Norman, OK},
+  year      = {1961}
+}
+
+@book{gaertner2000reducing,
+  author    = {Gaertner, Samuel L. and Dovidio, John F.},
+  title     = {Reducing Intergroup Bias: The Common Ingroup Identity Model},
+  series    = {Essays in Social Psychology},
+  publisher = {Psychology Press},
+  address   = {Philadelphia, PA},
+  year      = {2000}
+}
+
+@article{levine2005identity,
+  author    = {Levine, Mark and Prosser, Amy and Evans, David and Reicher, Stephen},
+  title     = {Identity and Emergency Intervention: How Social Group Membership and Inclusiveness of Group Boundaries Shape Helping Behavior},
+  journal   = {Personality and Social Psychology Bulletin},
+  volume    = {31},
+  number    = {4},
+  pages     = {443--453},
+  year      = {2005},
+  doi       = {10.1177/0146167204271651}
+}
+
+@article{pettigrew2006contact,
+  author    = {Pettigrew, Thomas F. and Tropp, Linda R.},
+  title     = {A Meta-analytic Test of Intergroup Contact Theory},
+  journal   = {Journal of Personality and Social Psychology},
+  volume    = {90},
+  number    = {5},
+  pages     = {751--783},
+  year      = {2006},
+  doi       = {10.1037/0022-3514.90.5.751}
+}
+
+@book{brehm1966reactance,
+  author    = {Brehm, Jack W.},
+  title     = {A Theory of Psychological Reactance},
+  publisher = {Academic Press},
+  address   = {New York, NY, USA},
+  year      = {1966}
+}
+
+@inproceedings{whenaiagrees2026,
+  author    = {Liu, Joshua Mu-En and Weng, Clarence Chi-Hong and Lin, Yu-Hsuan and Hsiao, Pang-Yu and Hou, Yoyo Tsung-Yu},
+  title     = {When AI Agrees, Polarization Sticks: Private AI Consulting May Increase Confidence and Reduces Depolarization},
+  booktitle = {Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26)},
+  pages     = {1--7},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  year      = {2026},
+  doi       = {10.1145/3772363.3798705}
+}
+
+% ---- 2.3 Technical: LLM agents, AI mediation ----
+
+@inproceedings{park2023generative,
+  author    = {Park, Joon Sung and O'Brien, Joseph C. and Cai, Carrie J. and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S.},
+  title     = {Generative Agents: Interactive Simulacra of Human Behavior},
+  booktitle = {Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST '23)},
+  year      = {2023},
+  publisher = {Association for Computing Machinery},
+  doi       = {10.1145/3586183.3606763}
+}
+
+@inproceedings{govers2024aimediators,
+  author    = {Govers, Jarod and Velloso, Eduardo and Kostakos, Vassilis and Goncalves, Jorge},
+  title     = {AI-Driven Mediation Strategies for Audience Depolarisation in Online Debates},
+  booktitle = {Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems (CHI '24)},
+  year      = {2024},
+  publisher = {Association for Computing Machinery},
+  doi       = {10.1145/3613904.3642322}
+}
+
+% =======================  RAY LC LAB PAPERS  =========================
 
 @inproceedings{zeng2025ronaldo,
   author    = {Zeng, Yuhan and Shi, Yingxuan and Huang, Xuehan and Nah, Fiona and LC, Ray},
@@ -66,8 +201,6 @@
   note      = {arXiv:2602.06134}
 }
 
-% ---------- Additional lab papers (authors per lab listing; expand names) ----------
-
 @inproceedings{zhang2026adhd,
   author    = {Zhang, F. and Fu, J. Y. and Chen, K. X. and LC, Ray},
   title     = {Laughing Through the Struggles: Understanding ADHD Experience and Community Engagement Through Memes and Comments on Instagram},
@@ -86,14 +219,6 @@
   note    = {CSCW 2026 (PACMHCI)}
 }
 
-@article{ling2026fortune,
-  author  = {Ling, L. and Zheng, X. Y. and Cao, G. C. and LC, Ray},
-  title   = {Re-Tell the Fortune so I Can Believe It: How Chinese User Communities Engage with and Interpret GenAI-based Fortune-Telling},
-  journal = {Proceedings of the ACM on Human-Computer Interaction},
-  year    = {2026},
-  note    = {CSCW 2026 (PACMHCI); arXiv:2603.27784}
-}
-
 @article{zhang2025dating,
   author  = {Zhang, F. and Chen, Y. and Zeng, X. K. and Wang, T. Q. and Ling, L. and LC, Ray},
   title   = {An Image of Ourselves in Our Minds: How College-educated Online Dating Users Construct Profiles for Effective Self Presentation},
@@ -103,15 +228,6 @@
   doi     = {10.1145/3710929}
 }
 
-@inproceedings{chen2025space,
-  author    = {Chen, Y. H. and Fu, K. X. and Chen, Q. Y. and Lu, Z. C. and LC, Ray},
-  title     = {The Configuration of Space: Probing the Way Social Interaction and Perception are Affected by Task-Specific Spatial Representations in Online Video Communication},
-  booktitle = {HCI International 2025},
-  year      = {2025},
-  publisher = {Springer},
-  doi       = {10.1007/978-3-031-92826-0_8}
-}
-
 @inproceedings{du2025invisible,
   author    = {Du, N. H. and Wang, L. Z. and Li, Y. R. and LC, Ray},
   title     = {Designing for the Invisible: Raising Awareness for the Experience of the Homeless in an LLM-based Serious Game},
@@ -119,23 +235,6 @@
   year      = {2025},
   publisher = {Association for Computing Machinery},
   doi       = {10.1145/3748699.3749822}
-}
-
-@inproceedings{fu2025aegis,
-  author    = {Fu, J. Y. and Lu, Y. Y. and Yang, Z. H. and Nah, Fiona and LC, Ray},
-  title     = {Cracking Aegis: An Adversarial LLM-based Game for Raising Awareness of Vulnerabilities in Privacy Protection},
-  booktitle = {Proceedings of the 2025 ACM Designing Interactive Systems Conference (DIS '25)},
-  year      = {2025},
-  publisher = {Association for Computing Machinery},
-  doi       = {10.1145/3715336.3735812}
-}
-
-@article{agcal2025bricolage,
-  author  = {Agcal, B. and Yin, Z. Y. and Miller, M. and LC, Ray},
-  title   = {Bricolage: Aligning with Climate Action through Playful Participatory Design in Speculative Scenarios},
-  journal = {International Journal of Play},
-  year    = {2025},
-  doi     = {10.1080/21594937.2025.2464324}
 }
 
 @article{hui2025moral,

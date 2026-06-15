@@ -1,6 +1,7 @@
 % =====================================================================
-% background.tex  --  "Polarization Defusing"  (LAB-ONLY related work)
-% At this stage the related work reviews ONLY papers from Ray LC's lab.
+% background.tex  --  "Polarization Defusing" (Lakers vs Celtics)
+% Three-subsection, theory-driven related work:
+%   2.1 Sociological | 2.2 Psychological | 2.3 Technical (PROVISIONAL)
 % Requires in preamble: \usepackage{booktabs} \usepackage{amssymb} \usepackage{tabularx}
 % Bibliography keys live in refs.bib.
 % =====================================================================
@@ -12,21 +13,21 @@
 \section{Background and Related Work}
 \label{sec:background}
 
-Our project asks how to \emph{defuse} polarization in large interpersonal
-online groups---recruiting already-polarized communities and intervening in
-their everyday chat medium (forum threads, group messaging, Discord-style
-channels) with a population of generative-AI agents that exert \emph{social
-influence} rather than top-down moderation. Rather than survey the field
-broadly, we position this project against our group's own prior work, which has
-independently developed each ingredient the project must combine: (i)~studies of
-how people express opinion and form communities on everyday online platforms,
-(ii)~systems in which LLM and multi-agent technologies steer opinion or
-behavior, and (iii)~conversational and playful designs that shift attitudes.
-Table~\ref{tab:rw} maps representative lab systems against the design
-commitments of the present project, and the three subsections below unpack each
-line in turn. Read together, they show that while our group has built every
-piece, no prior project has assembled them into a multi-agent intervention for
-defusing polarization---precisely the gap we target.
+Our project asks how to \emph{defuse} affective polarization between rival fan
+communities---specifically Los Angeles Lakers and Boston Celtics
+supporters---within a simulated social-media platform, using a population of
+generative-AI agents that exert peer-level \emph{social influence} rather than
+top-down correction. We choose an identity-based sports rivalry because it is a
+tractable, ecologically familiar instance of affective polarization whose
+mechanisms are domain-general: an intervention that works here speaks to
+affective polarization more broadly. We situate the project along three lines.
+\emph{Sociologically} (\S\ref{sec:rw-socio}), we frame polarization as a
+group-level, identity-driven structural phenomenon. \emph{Psychologically}
+(\S\ref{sec:rw-psych}), we identify the intergroup mechanisms that sustain it
+and the points where an intervention can cut in. \emph{Technically}
+(\S\ref{sec:rw-tech}), we review how LLM and multi-agent systems can carry that
+intervention inside a social platform. Table~\ref{tab:rw} positions
+representative prior \emph{systems} against our design commitments.
 
 % ---------------------------------------------------------------------
 \begin{table*}[t]
@@ -34,111 +35,138 @@ defusing polarization---precisely the gap we target.
   \footnotesize
   \setlength{\tabcolsep}{4pt}
   \renewcommand{\arraystretch}{1.2}
-  \caption{Map of prior \emph{lab} work against the design commitments of
+  \caption{Representative prior systems against the design commitments of
     \emph{Polarization Defusing}. \yes~= central, \prt~= partial/indirect,
-    \no~= absent. ``Target'' marks whether the work concerns \emph{opinion} (O)
-    or \emph{behavior} (B). Bottom row is the gap our project fills.}
+    \no~= absent. ``Target'' marks \emph{opinion} (O) or \emph{behavior} (B).
+    Bottom row is the gap our project fills. (Foundational theory is discussed
+    in the prose, not tabulated here.)}
   \label{tab:rw}
-  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}X c c c >{\raggedright\arraybackslash}p{2.5cm} c c@{}}
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.9cm} >{\raggedright\arraybackslash}X c c c >{\raggedright\arraybackslash}p{2.5cm} c@{}}
     \toprule
-    \textbf{Lab work} & \textbf{Everyday medium} & \textbf{Reduce polariz.} & \textbf{LLM/ GenAI} & \textbf{Multi-agent} & \textbf{Influence lever} & \textbf{Target} & \textbf{Play} \\
+    \textbf{Prior system} & \textbf{Platform / medium} & \textbf{Reduce polariz.} & \textbf{LLM/ GenAI} & \textbf{Multi-agent} & \textbf{Influence lever} & \textbf{Target} \\
     \midrule
-    Ronaldo's a poser~\cite{zeng2025ronaldo}      & Online forum (sports debate) & \prt & \yes & \no  & Argument construction        & O   & \no  \\
-    Climate-change TikTok~\cite{zhang2026climate} & Social media (short video)   & \no  & \no  & \no  & Personal narrative / emotion & O   & \no  \\
-    ADHD on Instagram~\cite{zhang2026adhd}        & Social media (memes/comments)& \no  & \no  & \no  & Community engagement / humor & O   & \prt \\
-    Online dating profiles~\cite{zhang2025dating} & Online dating platform       & \no  & \no  & \no  & Self-presentation            & O   & \no  \\
-    Can AI Prompt Humans~\cite{zhang2025ecoecho}  & Serious game (NPC dialogue)  & \no  & \yes & \yes & Prompt act + show consequence& B   & \yes \\
-    Breaking the News~\cite{tang2025breaking}     & Social-media-sim game        & \prt & \yes & \yes & Role-play + inoculation      & O   & \yes \\
-    Eternagram~\cite{zhou2024eternagram}          & Chat / text adventure        & \prt & \yes & \no  & Narrative immersion          & O   & \yes \\
-    Designing for the Invisible~\cite{du2025invisible} & Serious game            & \no  & \yes & \no  & Empathy / perspective-taking & O   & \yes \\
-    Hear You in Silence~\cite{jiang2026hear}      & 1:1 conversational agent     & \no  & \yes & \no  & Active listening / pacing    & \prt& \no  \\
+    Ronaldo's a poser~\cite{zeng2025ronaldo}         & Live online forum (fan debate)     & \prt & \yes & \no  & Argument construction          & O \\
+    Donkers \& Ziegler~\cite{donkers2025synthetic}   & Synthetic LLM social network       & \no  & \yes & \yes & (studies polarization)         & O \\
+    Govers et al.~\cite{govers2024aimediators}       & Online debate                      & \yes & \yes & \no  & AI mediation                   & O \\
+    Breaking the News~\cite{tang2025breaking}        & Social-media-sim game              & \prt & \yes & \yes & Role-play + simulated public   & O \\
+    Can AI Prompt Humans~\cite{zhang2025ecoecho}     & Serious game (NPC dialogue)        & \no  & \yes & \yes & Prompt act + show consequence  & B \\
+    Hear You in Silence~\cite{jiang2026hear}         & 1:1 conversational agent           & \no  & \yes & \no  & Active listening / turn pacing & \prt \\
     \midrule
-    \textbf{Ours (Polariz. Defusing)} & \textbf{Group chat / forum / Discord} & \textbf{\yes} & \textbf{\yes} & \textbf{\yes} & \textbf{Peer social influence} & \textbf{O\,/\,B} & \textbf{\prt} \\
+    \textbf{Ours (Polariz. Defusing)} & \textbf{Simulated social platform} & \textbf{\yes} & \textbf{\yes} & \textbf{\yes} & \textbf{Peer recategorization (CIIM)} & \textbf{O\,/\,B} \\
     \bottomrule
   \end{tabularx}
 \end{table*}
 
 % =====================================================================
-\subsection{Opinion Expression and Community Dynamics on Everyday Platforms}
-\label{sec:rw-polarization}
+\subsection{Sociological: Polarization as a Group-Level, Identity-Driven Phenomenon}
+\label{sec:rw-socio}
 
-Our group has studied how people voice opinions and coalesce into groups across
-the very media our project targets. Most directly, \emph{Ronaldo's a poser!}~\cite{zeng2025ronaldo}
-observes soccer fans debating in a live online forum, showing how participants
-recruit generative AI to construct arguments and how their rhetoric shifts as
-new, opposing members arrive---a close model of the competitive, identity-driven
-dynamics that harden into polarization. Complementing this, work on how creators
-express emotions, opinions, and data about climate change in TikTok short
-videos~\cite{zhang2026climate} and on how an ADHD community engages through memes
-and comments on Instagram~\cite{zhang2026adhd} characterizes opinion and
-affective expression in everyday social media, including the humor and personal
-narrative through which contested or stigmatized stances circulate. At the level
-of identity, our study of how online-dating users construct profiles for
-effective self-presentation~\cite{zhang2025dating} shows how people perform and
-manage identity for an imagined audience---an antecedent of the in-group
-signaling that fuels polarization. Together these studies establish the
-\emph{problem space}: large groups on everyday platforms express opinion in
-emotionally charged, identity-laden ways, motivating our choice to recruit
-already-polarized communities and to treat polarization as both an opinion and an
-affective phenomenon. What none of this work attempts is to \emph{intervene} in
-those dynamics, which is the project's aim.
+Contemporary polarization is increasingly understood as \emph{affective} rather
+than merely issue-based: people feel warmth toward their in-group and animus
+toward the out-group, independent of how far apart their actual positions
+are~\cite{iyengar2015fear,iyengar2019origins}. This animus is rooted in group
+identity. Social Identity Theory holds that simply categorizing oneself into a
+group generates in-group favoritism and out-group derogation, so conflict is
+driven by identity rather than by tangible stakes~\cite{tajfel1979sit}. Sports
+fandom is a paradigmatic case: degree of identification with a team is a genuine
+social identity that structures perception and behavior~\cite{wann1993identification},
+which is why a historic, city-based rivalry such as Lakers versus Celtics
+functions as identity-based polarization rather than a mere difference of
+preference---and a cleaner model than player-versus-player disputes.
 
-% =====================================================================
-\subsection{LLM and Multi-Agent Systems for Social Influence and Behavior Change}
-\label{sec:rw-multiagent}
-
-A second strand of our work builds AI systems that actively steer opinion or
-behavior. \emph{Can AI Prompt Humans?}~\cite{zhang2025ecoecho} inverts the usual
-human-prompts-AI relationship: multimodal agents prompt players' actions and
-surface their consequences, significantly shifting intended behavior---direct
-evidence that a \emph{population} of agents can initiate influence rather than
-merely respond, and the closest precedent for our multi-agent design.
-\emph{Breaking the News}~\cite{tang2025breaking} uses LLM agents to simulate a
-reactive public whose ``opinion'' players try to sway, demonstrating that
-LLM-driven social audiences can be believable and consequential---the machinery
-a defusing intervention would need to model peer reaction at scale. At a more
-foundational level, our analysis of moral responses in large language
-models~\cite{hui2025moral} quantifies how LLMs encode attitudes and value
-judgments, informing both how agents might be steered to model moderate
-positions and where their biases could distort a depolarization attempt. These
-projects show our group can make GenAI agents that influence people and that
-simulate social others, but they pursue sustainability or misinformation goals,
-not the reduction of interpersonal polarization, and only \emph{Can AI Prompt
-Humans} uses more than one agent.
+On everyday platforms, this identity-driven antagonism plays out as toxic,
+self-reinforcing discourse. Our own study of a live online forum shows rival fans
+recruiting generative AI to sharpen their arguments and escalating as opposing
+newcomers arrive~\cite{zeng2025ronaldo}, while our work on how people express
+contested opinions and emotions on TikTok~\cite{zhang2026climate} and build
+identity-laden communities on Instagram~\cite{zhang2026adhd} and online-dating
+platforms~\cite{zhang2025dating} documents the affective, performative character
+of online opinion expression. Critically for our method, Donkers and
+Ziegler~\cite{donkers2025synthetic} demonstrate that a \emph{synthetic} social
+network populated by LLM agents can reproduce the key dynamics of polarized
+discourse under controlled, manipulable conditions---establishing both the
+construct validity of a simulated platform and a methodological precedent for the
+environment we build. Together these works establish the problem space: rival
+identities produce affective polarization that is enacted and amplified online,
+motivating an intervention sited in the medium itself.
 
 % =====================================================================
-\subsection{Conversational Agents and Playful Interventions for Attitude Change}
-\label{sec:rw-intervention}
+\subsection{Psychological: Intergroup Mechanisms and Where Intervention Cuts In}
+\label{sec:rw-psych}
 
-The third strand concerns how an agent should engage so that polarized users
-stay in dialogue rather than entrench. \emph{Hear You in Silence}~\cite{jiang2026hear}
-designs conversational agents that perform active listening through context-aware
-pacing and strategic silence, showing that \emph{how} and \emph{when} an agent
-responds shapes human-likeness, trust, and self-disclosure---the very levers a
-defusing agent needs to earn standing before it ever challenges a view. On the
-playful side, our group has repeatedly used games and speculative play as a
-low-reactance route to attitude change: \emph{Eternagram}~\cite{zhou2024eternagram}
-probes and nudges climate attitudes through a ChatGPT-driven text adventure;
-\emph{Designing for the Invisible}~\cite{du2025invisible} uses an LLM-based
-serious game to build empathy and perspective-taking toward a stigmatized
-out-group; and \emph{Cracking Aegis}~\cite{fu2025aegis} turns adversarial
-role-play with an LLM into awareness change. \emph{Bricolage}~\cite{agcal2025bricolage}
-further shows that playful, participatory speculation can align people with a
-contested cause. These designs establish that our group can shift attitudes
-through conversation and play---grounding the optional \emph{play} dimension of
-our project---yet each addresses a single user or a non-adversarial topic, rather
-than defusing entrenched disagreement among a polarized group.
+If polarization is sustained by social categorization, decades of intergroup
+research specify how to loosen it. The Contact Hypothesis, confirmed across
+hundreds of studies, shows that contact between groups reduces prejudice under
+supportive conditions~\cite{pettigrew2006contact}; the Robbers Cave studies show
+that \emph{superordinate cooperative goals}---tasks that require the groups to
+work together---reduce conflict more durably than contact
+alone~\cite{sherif1961robbers}. The Common Ingroup Identity Model (CIIM)
+explains why: recategorizing former out-group members into a shared, more
+inclusive in-group (``we are all NBA fans'') redirects in-group favoritism
+toward the erstwhile rival, reducing bias~\cite{gaertner2000reducing}. This
+mechanism has direct empirical support in our exact domain: Levine et
+al.~\cite{levine2005identity} found that football fans helped an injured rival
+supporter far more often when a superordinate ``football fan'' identity, rather
+than a narrow team identity, was salient. This is the theoretical core of our
+design---and it carries two cautions. First, recategorization that erases
+subgroup identities can trigger distinctiveness threat, so a \emph{dual-identity}
+framing that preserves team identity while adding the superordinate one is
+typically more robust; and a shared cooperative goal is preferable to a common
+\emph{enemy}, which tends to displace hostility rather than dissolve it.
+
+The second caution concerns \emph{how} an intervention is delivered. Psychological
+Reactance Theory holds that perceived attempts to constrain one's freedom---
+including overt persuasion---provoke resistance and a rebound toward the
+threatened position~\cite{brehm1966reactance}. Recent HCI evidence sharpens this
+for AI: when an AI simply agrees with or validates a user's existing stance,
+confidence in the polarized position \emph{increases} and depolarization becomes
+less likely~\cite{whenaiagrees2026}. Heavy-handed, content-level persuasion by an
+LLM is therefore the wrong lever. This motivates our commitment to
+\emph{structural} rather than rhetorical intervention: arranging the platform so
+that participants \emph{discover} a common identity through cooperative
+cross-group interaction, with agents shaping the social context rather than
+arguing positions.
+
+% =====================================================================
+\subsection{Technical: Multi-Agent LLM Social Influence in Simulated Platforms}
+\label{sec:rw-tech}
+
+\textbf{(Provisional---to be finalized once the system design is locked.)}
+Realizing a structural intervention requires agents that can populate and shape a
+live platform. Generative agents can credibly simulate human memory, reflection,
+and social action at scale~\cite{park2023generative}, and our own systems show
+this is achievable for influence: multimodal agents can prompt people's actions
+and shift behavior~\cite{zhang2025ecoecho}, and LLM agents can simulate a
+reactive public whose opinion moves believably~\cite{tang2025breaking}. AI
+mediators can measurably depolarize online debate, though their effect depends on
+social positioning and conversational style rather than on argument
+alone~\cite{govers2024aimediators}.
+
+Our design leans on \emph{multiple} agents as the active ingredient. Rather than a
+single authoritative mediator, a population of peer-like agents can \emph{model}
+de-escalated behavior for participants to imitate---showing both sides in
+respectful exchange, or enacting cross-rival harmony that establishes a descriptive
+norm. Agent \emph{turn-taking} can itself be a lever: visibly alternating, inclusive
+participation signals that ``everyone talks,'' nudging the group away from
+pile-on dynamics. The conversational competencies our group has developed support
+this---context-aware pacing and active listening govern when and how an agent
+should speak to seem human and earn standing~\cite{jiang2026hear}---as do
+low-reactance, playful framings of cooperative tasks, in the register of our
+LLM-driven games for attitude change~\cite{zhou2024eternagram,du2025invisible}.
+Finally, because agents will be steered to model moderate, prosocial positions,
+how LLMs encode moral and attitudinal stances is a live design concern that our
+analysis of model moral responses begins to map~\cite{hui2025moral}.
 
 % =====================================================================
 \paragraph{Summary and gap.}
-Across these three strands, our group has separately established that people
-polarize through emotionally charged, identity-driven expression on everyday
-platforms (\S\ref{sec:rw-polarization}); that our LLM and multi-agent systems can
-steer opinion and behavior and credibly simulate social others
-(\S\ref{sec:rw-multiagent}); and that our conversational and playful designs can
-shift attitudes while keeping users engaged (\S\ref{sec:rw-intervention}). As
-Table~\ref{tab:rw} shows, no single prior project combines these commitments:
-intervening in an \emph{everyday} group medium, targeting \emph{already-polarized}
-populations, and using a \emph{multi-agent} community of GenAI peers to defuse
-\emph{either} opinion or behavioral polarization through social influence. Our
-project unites these threads to occupy precisely that gap.
+The sociological literature establishes that rival identities produce affective
+polarization enacted online (\S\ref{sec:rw-socio}); the psychological literature
+specifies recategorization toward a common in-group as a defusing mechanism, while
+warning that overt AI persuasion backfires (\S\ref{sec:rw-psych}); and the
+technical literature shows LLM multi-agent systems can simulate and influence
+social environments (\S\ref{sec:rw-tech}). As Table~\ref{tab:rw} shows, no prior
+system unites these: a \emph{simulated social platform} that recruits an
+\emph{already-polarized} rivalry and uses a \emph{multi-agent} community of GenAI
+peers to defuse affective polarization \emph{structurally}---through cooperative
+recategorization and behavioral modeling rather than direct persuasion. Our
+project occupies precisely this gap.
