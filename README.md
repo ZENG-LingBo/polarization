@@ -42,6 +42,8 @@ show it backfires.
 | [`qualitative_workflow.md`](qualitative_workflow.md) | Qual analysis plan in the **lab's house style** (Level 1/2/3 coding, hybrid Braun&Clarke×Saldaña TA, two streams: interviews + platform-behavior obs w/ Cohen's κ), day-by-day, provisional code manual. | qual |
 | [`interview_guide.md`](interview_guide.md) | Post-session semi-structured interview guide (lab interview rules; agent-detection & common-identity surfaced unprompted). | qual |
 | [`coding_templates/`](coding_templates/) | `interview_opencoding_template.csv` (lab open-coding format) + `observation_codebook_seed.csv` (incivility/group-framing/de-escalation codes). | qual |
+| [`coded_interview_example.md`](coded_interview_example.md) | Worked gold-standard: mock transcript → open codes → initial-coding notes → focused codes → theme/subthemes → results paragraph. | qual |
+| [`consent_debrief.md`](consent_debrief.md) | IRB consent form (CityU lab template + authorized-deception clause) + post-session debrief script with data-withdrawal. | ethics |
 
 ### 🤖 Intervention eval kit
 | File | What it is | TODO |
