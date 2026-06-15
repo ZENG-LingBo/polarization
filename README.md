@@ -39,6 +39,9 @@ show it backfires.
 | [`survey_instrument.md`](survey_instrument.md) | Exact survey item wording per wave (SSIS, feeling thermometer, social distance, traits, IOS, CIIM mediator, allocation, reactance, manipulation checks) + scoring. | — |
 | [`pilot_protocol.md`](pilot_protocol.md) | ~20-person toxicity-induction pilot that doubles as the control cell: induction levers, procedure, 4 measure buckets, success criteria, ethics. | SECOND |
 | [`recruitment.md`](recruitment.md) | Recruitment cautions (mask purpose, deception/IRB, quotas, cross-cultural), screener, and bilingual (EN/中文) recruitment messages. | recruit |
+| [`qualitative_workflow.md`](qualitative_workflow.md) | Qual analysis plan in the **lab's house style** (Level 1/2/3 coding, hybrid Braun&Clarke×Saldaña TA, two streams: interviews + platform-behavior obs w/ Cohen's κ), day-by-day, provisional code manual. | qual |
+| [`interview_guide.md`](interview_guide.md) | Post-session semi-structured interview guide (lab interview rules; agent-detection & common-identity surfaced unprompted). | qual |
+| [`coding_templates/`](coding_templates/) | `interview_opencoding_template.csv` (lab open-coding format) + `observation_codebook_seed.csv` (incivility/group-framing/de-escalation codes). | qual |
 
 ### 🤖 Intervention eval kit
 | File | What it is | TODO |
