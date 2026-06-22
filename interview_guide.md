@@ -28,12 +28,12 @@ it.** Record with consent.
 - Were there moments you wanted to fire back but didn't? What was going on there?
 - *(if toxicity arose)* How did it feel when things got heated?
 
-## 3. The other participants (RQ3 mechanism — agent detection, **unprompted**)
+## 3. The other participants (RQ2 mechanism — agent detection, **unprompted**)
 - What stood out to you about the other people in the thread?
 - Did anyone change how the conversation was going? Tell me how. *(don't name agents)*
 - *(only if they mention someone calm/odd/bot-like)* What gave you that impression?
 
-## 4. Common ground (RQ3 — common-identity discovery, **let it surface**)
+## 4. Common ground (RQ2 — common-identity discovery, **let it surface**)
 - Did anything during the session feel like you had something in common with the
   [RIVAL] fans? *(probe: when did that come up — how?)*
 - *(if a shared task happened)* How was working on that together with [RIVAL] fans?

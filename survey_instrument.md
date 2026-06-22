@@ -105,7 +105,7 @@ bets for a significant effect.*
 
 ---
 
-## Block F — Common ingroup identity representation  *(MEDIATOR, RQ3)*
+## Block F — Common ingroup identity representation  *(MEDIATOR, RQ2)*
 *Source: Gaertner & Dovidio (2000) CIIM representations, adapted. Scale 1–7 (1 =
 strongly disagree … 7 = strongly agree). Wave: **S2** (about the platform experience).*
 

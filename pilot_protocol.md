@@ -83,7 +83,7 @@ Stack these; each is grounded in what we know escalates fan conflict:
    injection at ~10 min; minimal moderation (safety only).
 5. **S2 Post-survey** — repeat polarization DVs + state reactance + manipulation checks.
 6. **Interview (subset, n≈6–8)** — semi-structured: what made it heated? did you feel
-   pushed? what would have calmed you down? *(feeds RQ1/RQ3 qualitative)*
+   pushed? what would have calmed you down? *(feeds RQ1/RQ2 qualitative)*
 7. **Debrief** — purpose, that conflict was by design, cooldown, resources.
 
 ---

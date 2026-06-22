@@ -81,7 +81,7 @@ possible agent detection ("too reasonable") did NOT block the effect
 
 RQs Inspiration:
 How does a single calm, question-asking peer reset the descriptive norm of a hostile fan thread? (RQ1)
-Why is *discovered* common identity (shared task) accepted while *stated* common identity is rejected? (RQ3)
+Why is *discovered* common identity (shared task) accepted while *stated* common identity is rejected? (RQ2)
 ```
 
 ---
@@ -93,9 +93,9 @@ Why is *discovered* common identity (shared task) accepted while *stated* common
 | **Hostility as the default norm** | hostility front-loaded · pile-on nearly drove exit · "ratio" culture | RQ1 |
 | **Peer-modeled de-escalation** | calm peer breaks hostile norm · genuine question invites engagement · norm spreads to others | RQ1 |
 | **Lowered defensiveness** | shift from winning to conversing · concedes point to rival | RQ1 |
-| **Stated vs. discovered common identity** | rejects stated common identity as fake · common ground via shared task · "on the same side" | **RQ3** |
-| **Dual-identity outcome** | still rivals + watch-a-game-with · softened toward out-group | RQ3 |
-| **Agent salience without backfire** | suspects participant not real · "too reasonable" · effective despite suspicion | RQ2/RQ3 |
+| **Stated vs. discovered common identity** | rejects stated common identity as fake · common ground via shared task · "on the same side" | **RQ2** |
+| **Dual-identity outcome** | still rivals + watch-a-game-with · softened toward out-group | RQ2 |
+| **Agent salience without backfire** | suspects participant not real · "too reasonable" · effective despite suspicion | RQ2 |
 
 ---
 

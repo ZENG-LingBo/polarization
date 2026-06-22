@@ -8,7 +8,7 @@ Saldaña thematic analysis). Reference materials live in `../Quant_Analysis/`.
 
 | Stream | Data | Serves | Coding rigor |
 |---|---|---|---|
-| **A. Interviews** | post-session semi-structured interviews (`interview_guide.md`) | RQ1 (felt experience), **RQ3 (mechanism:** did they discover common identity? feel pushed?) | **looser** — consensus reconciliation, no κ (per lab: "a bit looser on the interviews") |
+| **A. Interviews** | post-session semi-structured interviews (`interview_guide.md`) | RQ1 (felt experience), **RQ2 (mechanism:** did they discover common identity? feel pushed?) | **looser** — consensus reconciliation, no κ (per lab: "a bit looser on the interviews") |
 | **B. Platform behavior (observation/content)** | the forum/Discord conversation logs | **RQ1 (behavior:** toxicity, cross-group engagement, de-escalation, response to agents) | **stricter** — shared codebook, **two coders, Cohen's κ ≥ .70** (per lab observation template + `measures.md`) |
 
 Stream B is the qualitative complement to the quantitative toxicity pipeline
@@ -134,7 +134,7 @@ Hybrid **deductive → inductive** TA (lab recipe):
 6. **Decision rule** for promoting a code to a reported finding (state it explicitly,
    e.g. "appeared for ≥ half of participants, or carried a substantive mechanism").
 
-Map every theme back to an RQ (RQ1 process/behavior · RQ3 mechanism). Quotes are tagged
+Map every theme back to an RQ (RQ1 process/behavior · RQ2 mechanism/effect). Quotes are tagged
 `P#`. **Write the reflexivity/bias statement** in Methods (lab must).
 
 ---
@@ -147,10 +147,10 @@ Map every theme back to an RQ (RQ1 process/behavior · RQ3 mechanism). Quotes ar
 | Out-group animus | affective polariz. | RQ1/RQ2 | derogates-rival, dehumanizing-humor, "delusional" |
 | Toxicity / incivility | Coe 2014 | RQ1 | name-calling, dogpile, "ratio" |
 | De-escalation experience | active listening | RQ1 | felt-disarmed, calmed-by-peer, chose-not-to-bite |
-| **Common-identity discovery** | **CIIM** | **RQ3** | "we're all NBA fans", found-common-ground, dual-identity-felt |
-| Cooperative-task effect | superordinate goals | RQ1/RQ3 | enjoyed-shared-task, teamed-with-rival |
-| **Reactance / agent detection** | Brehm; *When AI Agrees* | RQ2/RQ3 | felt-pushed, suspected-bot, resisted-message |
-| Persistence | follow-up | RQ3 | softened-view, still-rivals-but |
+| **Common-identity discovery** | **CIIM** | **RQ2** | "we're all NBA fans", found-common-ground, dual-identity-felt |
+| Cooperative-task effect | superordinate goals | RQ1/RQ2 | enjoyed-shared-task, teamed-with-rival |
+| **Reactance / agent detection** | Brehm; *When AI Agrees* | RQ2 | felt-pushed, suspected-bot, resisted-message |
+| Persistence | follow-up | RQ2 | softened-view, still-rivals-but |
 
 ---
 

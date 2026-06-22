@@ -1,7 +1,7 @@
 % =====================================================================
 % background.tex  --  "Polarization Defusing" (Lakers vs Celtics)
 % Three-subsection, theory-driven related work:
-%   2.1 Sociological | 2.2 Psychological | 2.3 Technical (PROVISIONAL)
+%   2.1 Sociological | 2.2 Psychological | 2.3 Technical
 % Requires in preamble: \usepackage{booktabs} \usepackage{amssymb} \usepackage{tabularx}
 % Bibliography keys live in refs.bib.
 % =====================================================================
@@ -16,8 +16,8 @@
 Our project asks how to \emph{defuse} affective polarization between rival fan
 communities---specifically Los Angeles Lakers and Boston Celtics
 supporters---within a simulated social-media platform, using a population of
-generative-AI agents that exert peer-level \emph{social influence} rather than
-top-down correction. We choose an identity-based sports rivalry because it is a
+generative-AI agents \emph{embedded as in-group members} that exert peer-level
+\emph{social influence} rather than top-down correction. We choose an identity-based sports rivalry because it is a
 tractable, ecologically familiar instance of affective polarization whose
 mechanisms are domain-general: an intervention that works here speaks to
 affective polarization more broadly. We situate the project along three lines.
@@ -52,7 +52,7 @@ representative prior \emph{systems} against our design commitments.
     Can AI Prompt Humans~\cite{zhang2025ecoecho}     & Serious game (NPC dialogue)        & \no  & \yes & \yes & Prompt act + show consequence  & B \\
     Hear You in Silence~\cite{jiang2026hear}         & 1:1 conversational agent           & \no  & \yes & \no  & Active listening / turn pacing & \prt \\
     \midrule
-    \textbf{Ours (Polariz. Defusing)} & \textbf{Simulated social platform} & \textbf{\yes} & \textbf{\yes} & \textbf{\yes} & \textbf{Peer recategorization (CIIM)} & \textbf{O\,/\,B} \\
+    \textbf{Ours (Polariz. Defusing)} & \textbf{Simulated social platform} & \textbf{\yes} & \textbf{\yes} & \textbf{\yes} & \textbf{In-group recategorization (CIIM)} & \textbf{O\,/\,B} \\
     \bottomrule
   \end{tabularx}
 \end{table*}
@@ -111,36 +111,54 @@ than a narrow team identity, was salient. This is the theoretical core of our
 design---and it carries two cautions. First, recategorization that erases
 subgroup identities can trigger distinctiveness threat, so a \emph{dual-identity}
 framing that preserves team identity while adding the superordinate one is
-typically more robust; and a shared cooperative goal is preferable to a common
-\emph{enemy}, which tends to displace hostility rather than dissolve it.
+typically more robust~\cite{crisp2006recategorization}; and a shared cooperative
+goal is preferable to a common \emph{enemy}, which tends to displace hostility
+rather than dissolve it.
 
-The second caution concerns \emph{how} an intervention is delivered. Psychological
-Reactance Theory holds that perceived attempts to constrain one's freedom---
-including overt persuasion---provoke resistance and a rebound toward the
-threatened position~\cite{brehm1966reactance}. Recent HCI evidence sharpens this
+The second caution concerns \emph{how}---and by \emph{whom}---an intervention is
+delivered. Psychological Reactance Theory holds that perceived attempts to constrain
+one's freedom---including overt persuasion---provoke resistance and a rebound toward
+the threatened position~\cite{brehm1966reactance}. Recent HCI evidence sharpens this
 for AI: when an AI simply agrees with or validates a user's existing stance,
 confidence in the polarized position \emph{increases} and depolarization becomes
-less likely~\cite{whenaiagrees2026}. Heavy-handed, content-level persuasion by an
-LLM is therefore the wrong lever. This motivates our commitment to
-\emph{structural} rather than rhetorical intervention: arranging the platform so
-that participants \emph{discover} a common identity through cooperative
-cross-group interaction, with agents shaping the social context rather than
-arguing positions.
+less likely~\cite{whenaiagrees2026}. Standing matters as much as style: by
+Self-Categorization Theory, group norms can be redefined only by those recognized as
+in-group members, so an \emph{outside} agent lacks the legitimacy to recategorize and
+is apt to provoke reactance~\cite{turner1987selfcat}. Heavy-handed, content-level
+persuasion by an explicit or outsider LLM is therefore the wrong lever. This
+motivates our commitment to \emph{structural} intervention delivered \emph{from
+within}: arranging the platform so that participants \emph{discover} a common
+identity through cooperative cross-group interaction, with \emph{in-group} agents
+shaping the social context rather than arguing positions.
 
 % =====================================================================
 \subsection{Technical: Multi-Agent LLM Social Influence in Simulated Platforms}
 \label{sec:rw-tech}
 
-\textbf{(Provisional---to be finalized once the system design is locked.)}
-Realizing a structural intervention requires agents that can populate and shape a
-live platform. Generative agents can credibly simulate human memory, reflection,
+LLMs can already intervene inside a conversation: one-on-one dialogue durably
+reduces belief in conspiracy theories~\cite{costello2024durably}, and real-time chat
+assistants improve the tone and perceived quality of contentious political exchanges
+without shifting attitudes~\cite{argyle2023chat}. Two limitations recur.
+\emph{Level}: these interventions operate at the individual or dyadic level, treating
+depolarization as changing what a single person thinks---they move belief or tone
+while leaving the group relationship untouched, exactly as expected if animosity is
+rooted in group identity rather than private belief. Even AI that scales to group
+deliberation positions the system as a neutral \emph{mediator} summarizing competing
+views toward consensus~\cite{tessler2024commonground}. \emph{Standing}: the agent is
+an \emph{outsider}---an explicit AI or third-party mediator---and so cannot redefine
+who counts as ``us.'' We instead embed multiple agents as \emph{in-group members} and
+intervene at the level of group identity, introducing a superordinate identity from
+within (\S\ref{sec:rw-psych}).
+
+Realizing such a structural intervention requires agents that can populate and shape
+a live platform. Generative agents can credibly simulate human memory, reflection,
 and social action at scale~\cite{park2023generative}, and our own systems show
 this is achievable for influence: multimodal agents can prompt people's actions
 and shift behavior~\cite{zhang2025ecoecho}, and LLM agents can simulate a
 reactive public whose opinion moves believably~\cite{tang2025breaking}. AI
-mediators can measurably depolarize online debate, though their effect depends on
-social positioning and conversational style rather than on argument
-alone~\cite{govers2024aimediators}.
+mediators can measurably depolarize online debate, though---consistent with the
+standing argument---their effect depends on social positioning and conversational
+style rather than on argument alone~\cite{govers2024aimediators}.
 
 Our design leans on \emph{multiple} agents as the active ingredient. Rather than a
 single authoritative mediator, a population of peer-like agents can \emph{model}
@@ -161,12 +179,15 @@ analysis of model moral responses begins to map~\cite{hui2025moral}.
 \paragraph{Summary and gap.}
 The sociological literature establishes that rival identities produce affective
 polarization enacted online (\S\ref{sec:rw-socio}); the psychological literature
-specifies recategorization toward a common in-group as a defusing mechanism, while
-warning that overt AI persuasion backfires (\S\ref{sec:rw-psych}); and the
-technical literature shows LLM multi-agent systems can simulate and influence
-social environments (\S\ref{sec:rw-tech}). As Table~\ref{tab:rw} shows, no prior
-system unites these: a \emph{simulated social platform} that recruits an
-\emph{already-polarized} rivalry and uses a \emph{multi-agent} community of GenAI
-peers to defuse affective polarization \emph{structurally}---through cooperative
-recategorization and behavioral modeling rather than direct persuasion. Our
-project occupies precisely this gap.
+specifies recategorization toward a common in-group as a defusing mechanism---one
+that only recognized in-group members have the standing to trigger---while warning
+that overt AI persuasion backfires (\S\ref{sec:rw-psych}); and the technical
+literature shows that prior LLM interventions act at the individual or outsider
+level, even as LLM multi-agent systems can simulate and influence social
+environments (\S\ref{sec:rw-tech}). As Table~\ref{tab:rw} shows, no prior system
+unites these: a \emph{simulated social platform} that recruits an
+\emph{already-polarized} rivalry and embeds a \emph{multi-agent} community of
+\emph{undisclosed in-group} GenAI peers to defuse affective polarization
+\emph{structurally}---recategorizing from within through cooperative tasks and
+behavioral modeling rather than outsider persuasion. Our project occupies precisely
+this gap.

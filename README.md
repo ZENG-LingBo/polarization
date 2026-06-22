@@ -5,19 +5,27 @@ Boston Celtics) inside a **simulated social-media platform**, using a population
 **generative-AI agents** that exert peer-level **social influence** — *structurally*
 (cooperative recategorization, behavioral modeling) rather than by direct persuasion.
 
-**Theory spine:** Social Identity Theory → Common Ingroup Identity Model (CIIM) →
-recategorization toward a superordinate "we're all NBA fans" identity, delivered by
-multiple peer-like agents that model de-escalation and inclusive turn-taking. We avoid
-direct LLM persuasion because reactance (Brehm) and *When AI Agrees* (Liu et al. 2026)
-show it backfires.
+**Theory spine:** Social Identity / Self-Categorization Theory → Common Ingroup Identity
+Model (CIIM) → recategorization toward a superordinate "we're all NBA fans" identity,
+introduced *from within* by multiple **undisclosed in-group** agents that model
+de-escalation and a **dual** "team-fan-and-NBA-fan" identity. Because group norms can be
+redrawn only by recognized members, an outsider lacks the standing to recategorize; we
+therefore avoid direct LLM persuasion, which reactance (Brehm) and *When AI Agrees* (Liu
+et al. 2026) show backfires.
 
 **Research questions:**
-- **RQ1 (process/behavior):** how do polarized fan groups interact on the platform, and
-  what behavioral change emerges when a structured recategorization mechanic is added?
-- **RQ2 (effect):** how does a CIIM-based multi-agent LLM intervention affect affective
-  polarization between the groups?
-- **RQ3 (mechanism):** is any reduction mediated by perceived common identity, and does
-  it persist?
+- **RQ1 (interaction/process):** how do participants in polarized fan groups interact
+  with the embedded in-group agents on the platform?
+- **RQ2 (effect):** how do the embedded in-group agents affect interaction patterns and
+  group-level affective polarization between the groups? *(The hypothesized mediator —
+  perceived common identity — and its persistence are measured within RQ2; the former
+  RQ3 is folded in here.)*
+
+**Companion prototype:** a static, runnable demo of the platform lives at
+[`polarization-prototype`](https://github.com/ZENG-LingBo/polarization-prototype)
+([live demo](https://zeng-lingbo.github.io/polarization-prototype/)). This repo's
+`measures.md` is kept in sync with the prototype's `MEASURES.md` / `METRICS.md`, and the
+two-RQ outline above tracks the prototype's `OUTLINE.md`.
 
 ---
 
@@ -28,8 +36,8 @@ show it backfires.
 |---|---|
 | [`main.tex`](main.tex) | Entry point. Preamble (`booktabs`, `amssymb`, `tabularx`, `natbib`) + `\input`s below. |
 | [`introduction.tex`](introduction.tex) | §1 Introduction — problem, structural-intervention framing, RQ1–3, contributions. |
-| [`background.tex`](background.tex) | §2 Related Work — 3 subsections (**2.1 Sociological · 2.2 Psychological · 2.3 Technical**) + comparison table. 2.3 is **provisional** pending the system design. |
-| [`refs.bib`](refs.bib) | 29 references. External theory verified via Crossref/DBLP; Ray LC lab papers; measurement instruments. |
+| [`background.tex`](background.tex) | §2 Related Work — 3 subsections (**2.1 Sociological · 2.2 Psychological · 2.3 Technical**) + comparison table. §2.3 now **finalized** to the in-group-agent design (level + standing argument). |
+| [`refs.bib`](refs.bib) | 41 references. External theory verified via Crossref/DBLP; Ray LC lab papers; measurement instruments; the in-group-intervention refs (Argyle, Costello, Tessler, Crisp, Turner, Bail) + the GuesSync measurement anchor. |
 | [`paper.md`](paper.md) | **Markdown mirror** of intro + background for quick reading on GitHub. |
 
 ### 🧪 Study materials
@@ -75,16 +83,17 @@ All `\cite` keys resolve against `refs.bib` — verified each push.
 | Team TODO | State | Where |
 |---|---|---|
 | **ZERO** — decide topic | ✅ Lakers vs. Celtics | — |
-| **FIRST** — find measures that move | ✅ drafted | `measures.md`, `survey_instrument.md` |
+| **FIRST** — find measures that move | ✅ drafted; anchored to GuesSync model paper | `measures.md`, `survey_instrument.md` |
 | **SECOND** — induce + measure toxic convo | ✅ protocol drafted | `pilot_protocol.md` |
 | **#1** — eval LLM intervention texts | ✅ materials ready; needs Discord scoring | `intervention_examples.md`, `agent_posts_*.md` |
-| Write RW, 3 subsections | ✅ in Overleaf (2.3 provisional) | `background.tex` |
+| Write RW, 3 subsections | ✅ in Overleaf (§2.3 finalized) | `background.tex` |
 | Recruit participants | 🟡 materials ready (cautions, screener, EN/中文 messages) | `recruitment.md` |
-| Finalize system / lock §2.3 Technical | ⬜ pending design | `background.tex` |
+| Finalize system / lock §2.3 Technical | ✅ aligned to prototype design | `background.tex` |
 
 ### Open items
-- **§2.3 Technical** is marked provisional — finalize once the agent/platform design is
-  locked.
+- **§2.3 Technical** ✅ resolved — finalized to the in-group-agent design and aligned
+  with the [prototype](https://github.com/ZENG-LingBo/polarization-prototype); revisit
+  if the locked system design diverges.
 - **"Interruption paper"** referenced in the TODOs: induction currently folds in
   *Ronaldo* + *Hear You in Silence* mechanics; confirm if a specific other paper is meant.
 - **Author names** for the newer lab papers in `refs.bib` are initials from the lab

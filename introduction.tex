@@ -25,32 +25,46 @@ another, the further apart they move.
 Existing responses are poorly matched to this dynamic. Content moderation,
 fact-checking, and corrective messaging treat polarization as a problem of bad
 information delivered to individuals, yet overt persuasion provokes psychological
-reactance---a rebound toward the very position it targets~\cite{brehm1966reactance}.
-Recent HCI evidence sharpens the warning for AI specifically: when an AI simply
-agrees with or validates a user's stance, confidence in the polarized position
-\emph{increases} and depolarization becomes less likely~\cite{whenaiagrees2026}.
-These interventions also operate one user at a time, against a phenomenon that is
-fundamentally \emph{social}---sustained by group identity, peer signaling, and the
-felt presence of an audience. If generative AI can amplify polarized
-debate~\cite{zeng2025ronaldo}, the inverse question follows: can a \emph{population}
-of AI agents instead be arranged to defuse it?
+reactance---a rebound toward the very position it targets~\cite{brehm1966reactance}---and
+merely increasing exposure to opposing views can \emph{entrench} rather than soften
+division~\cite{bail2018exposure}. Recent HCI evidence sharpens the warning for AI
+specifically: when an AI simply agrees with or validates a user's stance, confidence
+in the polarized position \emph{increases} and depolarization becomes less
+likely~\cite{whenaiagrees2026}. Even the most effective AI interventions share a
+deeper limitation of \emph{level} and \emph{standing}: one-on-one dialogue durably
+shifts individual \emph{belief}~\cite{costello2024durably} and dyadic chat assistants
+improve conversational \emph{tone}~\cite{argyle2023chat}, while AI that scales to
+groups acts as an \emph{outsider} mediator summarizing views toward
+consensus~\cite{tessler2024commonground}---none engages the group identity in which
+the animosity is actually rooted, and an outside agent lacks the standing to redraw
+who counts as ``us.'' These interventions also operate one user at a time, against a
+phenomenon that is fundamentally \emph{social}---sustained by group identity, peer
+signaling, and the felt presence of an audience. If generative AI can amplify
+polarized debate~\cite{zeng2025ronaldo}, the inverse question follows: can a
+\emph{population} of AI agents instead be arranged to defuse it?
 
 We propose \emph{polarization defusing}: a simulated social-media platform that
 recruits members of an already-polarized rivalry and intervenes through a population
-of generative-AI agents exerting peer-level \emph{social influence} rather than
-top-down correction. Our intervention is \emph{structural} rather than rhetorical.
+of generative-AI agents embedded as \emph{in-group members} of each fandom, exerting
+peer-level \emph{social influence} rather than top-down correction. Our intervention
+is \emph{structural} rather than rhetorical, and it recategorizes \emph{from within}.
 Drawing on the Common Ingroup Identity Model~\cite{gaertner2000reducing} and the
 finding that superordinate cooperative goals reduce intergroup
 conflict~\cite{sherif1961robbers,pettigrew2006contact}, we arrange the platform so
 that rival fans \emph{discover} a shared, more inclusive identity (``we are all NBA
 fans'') through cooperative cross-group interaction---a recategorization shown to
 shift even rival sports fans toward helping one another~\cite{levine2005identity}.
-The agents do not argue positions; instead, multiple peer-like agents \emph{model}
-de-escalated behavior and inclusive turn-taking for participants to imitate,
-establishing a calmer descriptive norm. Our prior systems supply the building
-blocks: multimodal agents that prompt human action~\cite{zhang2025ecoecho}, LLM
-agents that simulate a reactive public~\cite{tang2025breaking}, and conversational
-agents whose pacing and active listening earn social standing~\cite{jiang2026hear}.
+Crucially, group norms can be redrawn only by those recognized as
+members~\cite{tajfel1979sit,turner1987selfcat}: so rather than an explicit AI or an
+outside mediator, multiple \emph{undisclosed in-group} agents introduce the
+superordinate identity from within, \emph{modeling} de-escalated behavior and a dual
+``team-fan-\emph{and}-NBA-fan'' identity~\cite{crisp2006recategorization} for
+participants to imitate, using low-reactance structural moves---seeding a shared
+cooperative task, acknowledging-then-redirecting---rather than argument. Our prior
+systems supply the building blocks: multimodal agents that prompt human
+action~\cite{zhang2025ecoecho}, LLM agents that simulate a reactive
+public~\cite{tang2025breaking}, and conversational agents whose pacing and active
+listening earn social standing~\cite{jiang2026hear}.
 
 We study the Los Angeles Lakers versus Boston Celtics rivalry: a historic,
 city-and-identity-based conflict that is widely recognized across both Western and
@@ -62,22 +76,23 @@ work has treated separately: whether the intervention shifts \emph{opinion}
 (expressed stance, affect toward the out-group) or \emph{behavior} (how members
 post, escalate, and engage). Accordingly, we ask:
 \begin{itemize}
-  \item \textbf{RQ1 (process / behavior).} How do polarized fan groups interact
-  and engage within a simulated social-media platform, and what behavioral changes
-  emerge when a structured recategorization mechanic is introduced?
-  \item \textbf{RQ2 (effect).} How does a Common-Ingroup-Identity--based,
-  multi-agent LLM intervention embedded in the platform affect affective
-  polarization between the opposing fan groups?
-  \item \textbf{RQ3 (mechanism).} Is any reduction in polarization mediated by
-  participants' perceived common identity, and does it persist after the
-  intervention is withdrawn?
+  \item \textbf{RQ1 (interaction / process).} How do participants in polarized fan
+  groups interact with the embedded in-group agents on the simulated platform?
+  \item \textbf{RQ2 (effect).} How do the embedded in-group agents affect
+  interaction patterns and group-level affective polarization between the opposing
+  fan groups?
 \end{itemize}
+We treat the hypothesized mechanism---a perceived common in-group
+identity---as a measured mediator within RQ2 (does any reduction run through
+recategorization, and does it persist?), rather than as a separate question.
 
 This work makes the following anticipated contributions: (1)~the framing and design
 of \emph{polarization defusing} as a structural, multi-agent social-influence
-intervention sited in a simulated social platform; (2)~a system in which peer-like
-GenAI agents drive cooperative recategorization and model de-escalated norms; and
-(3)~empirical findings, on the Lakers--Celtics rivalry, on whether and how such
-agents defuse affective and behavioral polarization. The remainder of the paper
+intervention sited in a simulated social platform; (2)~a system in which
+\emph{undisclosed in-group} GenAI agents drive cooperative recategorization from
+within---extending depolarization from the individual to the \emph{group} level, and
+from outsider persuasion to \emph{in-group} recategorization; and (3)~empirical
+findings, on the Lakers--Celtics rivalry, on whether and how such agents defuse
+affective and behavioral polarization. The remainder of the paper
 develops three lines of background---the sociological, psychological, and technical
 foundations of this approach---which we review next.
